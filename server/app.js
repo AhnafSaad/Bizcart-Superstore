@@ -1,5 +1,5 @@
 const express =require('express');
-const router =require('./src/routes/api');
+const router = require('../src/routes/api');
 const app= new express();
 
 const rateLimit =require('express-rate-limit');
@@ -19,8 +19,8 @@ const bodyParser = require('body-parser');
 
 
 
-let URI="mongodb+srv://<username>:<password>@cluster0.i5nrrf0.mongodb.net/ecom?retryWrites=true&w=majority";
-let option={user:'Rup774827',pass:'Rup774827',autoIndex:true}
+let URI="mongodb://localhost:27017/ecom";;
+let option = { autoIndex: true };
 //let URL="mongodb://localhost:27017/ecom4"
 //let option={user:'',pass:"",autoIndex:true};
 mongoose.connect(URI,option).then((res)=>{
